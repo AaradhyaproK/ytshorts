@@ -237,6 +237,10 @@ sridhar vembu zoho case study, zoho founder story hindi, rural india tech revolu
         cta_word = "CHANAKYA NITI"
         deity_tag = "#chanakya #takshashila #maurya #ancientindia"
         theme_tag = "#geopolitics #intelligence #vishkanya #historyfacts"
+    elif "lepakshi" in audio_basename.lower():
+        cta_word = "HAR HAR MAHADEV"
+        deity_tag = "#veerabhadra #shiva #mahadev #sanatandharma"
+        theme_tag = "#lepakshi #hangingpillar #antigravity #ancienttemple"
     else:
         cta_word = "SANATAN DHARMA"
         deity_tag = "#bharat #sanatandharma #incredibleindia"
