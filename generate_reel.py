@@ -272,6 +272,71 @@ lepakshi hanging pillar mystery, lepakshi temple history in hindi, floating pill
             f.write(content)
         return
 
+    if "dwarka" in audio_basename.lower() or "dwaraka" in audio_basename.lower():
+        content = f"""================================================================================
+⚡ VIBEITIHAAS VIRAL METADATA PACKAGE
+🎬 Video: {audio_basename}_ghibli_reel.mp4
+📌 Topic: The Submerged City of Dwarka — 9,000-Year-Old Underwater Kingdom
+================================================================================
+
+--------------------------------------------------------------------------------
+🔥 1. HIGH-CTR TITLES (Select for YouTube Shorts & Reels)
+--------------------------------------------------------------------------------
+Option 1 (Mystery & Discovery):
+9,000-Year-Old Golden City of Dwarka Found 120 Feet Underwater! 🌊🏛️
+
+Option 2 (Shocking Archaeological Proof):
+Scientists Thought It Was a Myth... Until Scuba Divers Found THIS! 😱
+
+Option 3 (Civilization Shock):
+Dwarka Existed Before Harappa?! Carbon Dating Stuns Global Historians! ⏳
+
+--------------------------------------------------------------------------------
+📸 2. INSTAGRAM REELS CAPTION (Ready to Copy-Paste)
+--------------------------------------------------------------------------------
+Scientists jise sirf ek myth maante the... wo 9000 saal puraana sonay ka sheher Arabian Sea ke 120 feet neeche zinda mil gaya! 🌊🏛️✨
+
+1988 mein marine archaeologists ne jab Gujarat ke Arabian Sea mein underwater dive ki, to unhe mile vishal semi-circular bastions, 30 feet unche carved pillars aur stone anchors jo bronze age ke the!
+
+Mahabharat mein spasht likha tha ki Shri Krishna ke praan tyaag ke baad unki divya Dwarka Nagari samundar mein doob gayi thi. Aur carbon dating ne prove kiya ki ye nagari lagbhag 7,500 se 9,000 saal puraani hai—yani Harappan civilization se bhi hazaron saal pehle!
+
+Aakhir bina modern cranes ke itne vishal sandstone blocks paani ke andar kaise assemble kiye gaye? 
+
+👇 Shri Krishna ki is pavitra nagari ke samman mein comment mein likhein:
+"JAI SHREE KRISHNA" 🙏🦚
+
+Save this reel & share with history lovers! 📲
+Follow @vibeitihaas for daily historical mysteries and untold Sanatan history.
+
+.
+.
+#vibeitihaas #dwarka #shreekrishna #ancientindia #underwatercity #mahabharata #sanatandharma #archaeology #gujarat #shorts #viralreels
+
+--------------------------------------------------------------------------------
+📺 3. YOUTUBE SHORTS DESCRIPTION (SEO & Algorithm Optimized)
+--------------------------------------------------------------------------------
+Marine archaeologists exploring the Arabian Sea off the coast of Gujarat discovered the ancient submerged kingdom of Dwarka 120 feet underwater. Carbon dating revealed artifacts dating back 7,500 to 9,000 years old, confirming the Mahabharata's historical accounts of Lord Krishna's submerged capital!
+
+🦚 Comment 'JAI SHREE KRISHNA' to celebrate our eternal heritage!
+🔔 Subscribe to @vibeitihaas for deep dives into Indian history, epics, and archaeology.
+
+#Shorts #Dwarka #LordKrishna #Mahabharata #vibeitihaas #AncientIndia #MarineArchaeology #SanatanDharma #Trending
+
+--------------------------------------------------------------------------------
+💬 4. PINNED COMMENT STRATEGY
+--------------------------------------------------------------------------------
+"Kya aapko lagta hai ki Dwarka ka doobna ek natural tsunami thi ya divya ichha? Comment mein apni ray batayein aur 'JAI SHREE KRISHNA' likhein! 👇🦚"
+
+--------------------------------------------------------------------------------
+🏷️ 5. SEARCH KEYWORDS / TAGS
+--------------------------------------------------------------------------------
+dwarka underwater city discovered, real dwarka underwater video, krishna dwarka nagari history, marine archaeology dwarka, vibeitihaas, mahabharata truth, carbon dating dwarka, viral shorts
+================================================================================
+"""
+        with open(output_path, "w", encoding="utf-8") as f:
+            f.write(content)
+        return
+
     title_topic = audio_basename.replace("_", " ").title()
     
     if "kailash" in audio_basename.lower():
@@ -504,6 +569,21 @@ def main():
                 top_rgb=(10, 15, 35), bot_rgb=(40, 120, 190)
             ),
         }
+    elif "dwarka" in audio_basename.lower() or "dwaraka" in audio_basename.lower():
+        assets = {
+            "golden_city": load_asset_or_fallback(
+                os.path.join(ASSETS_DIR, "ghibli_dwarka_01_golden_city*.jpg"),
+                top_rgb=(30, 60, 110), bot_rgb=(240, 190, 80)
+            ),
+            "marine_dive": load_asset_or_fallback(
+                os.path.join(ASSETS_DIR, "ghibli_dwarka_02_marine_dive*.jpg"),
+                top_rgb=(10, 40, 70), bot_rgb=(30, 150, 160)
+            ),
+            "sunken_gates": load_asset_or_fallback(
+                os.path.join(ASSETS_DIR, "ghibli_dwarka_03_sunken_gates*.jpg"),
+                top_rgb=(15, 50, 85), bot_rgb=(40, 160, 170)
+            ),
+        }
     else:
         assets = {
             "everest": load_asset_or_fallback(
@@ -653,6 +733,42 @@ def main():
             (53.36, 57.58, ["KYA YE ANCIENT BHARAT KI", "LOST ANTI-GRAVITY TECH THI?"], [(53.36, 55.48), (55.48, 57.58)]),
             (57.58, 58.90, ["COMMENT MEIN", "LIKHEIN:"], [(57.58, 58.38), (58.38, 58.90)]),
             (58.90, 60.92, ["HAR HAR MAHADEV!", "🔱 @VIBEITIHAAS"], [(58.90, 59.84), (59.84, 60.92)])
+        ]
+    elif "dwarka" in audio_basename.lower() or "dwaraka" in audio_basename.lower():
+        scenes_meta = [
+            {"start": 0.00,  "end": 10.06, "asset": "golden_city",    "zoom": (1.00, 1.15), "pan": (0.50, 0.45), "vfx": "godrays"},
+            {"start": 10.06, "end": 24.52, "asset": "marine_dive",    "zoom": (1.05, 1.25), "pan": (0.50, 0.48), "vfx": "particles"},
+            {"start": 24.52, "end": 36.26, "asset": "sunken_gates",   "zoom": (1.00, 1.20), "pan": (0.50, 0.42), "vfx": "particles"},
+            {"start": 36.26, "end": 44.30, "asset": "golden_city",    "zoom": (1.25, 1.08), "pan": (0.45, 0.52), "vfx": "mist"},
+            {"start": 44.30, "end": 61.78, "asset": "sunken_gates",   "zoom": (1.15, 1.30), "pan": (0.55, 0.40), "vfx": "golden_aura"},
+            {"start": 61.78, "end": 71.80, "asset": "marine_dive",    "zoom": (1.20, 1.08), "pan": (0.50, 0.45), "vfx": "particles"},
+            {"start": 71.80, "end": max(duration, 81.0), "asset": "golden_city", "zoom": (1.05, 1.25), "pan": (0.50, 0.40), "vfx": "golden_aura"},
+        ]
+        captions = [
+            (0.00, 3.12, ["SCIENTISTS JISE", "SIRF EK MYTH MAANTE THE..."], [(0.00, 1.34), (1.34, 3.12)]),
+            (3.12, 6.28, ["WO 9000 SAAL PURANA", "SONEY KA SHEHER..."], [(3.12, 5.04), (5.04, 6.28)]),
+            (6.28, 10.06, ["SAMUNDAR KE 120 FEET NEECHE", "ZINDA MIL GAYA!"], [(6.28, 8.68), (8.68, 10.06)]),
+            (10.06, 13.48, ["1988 MEIN MARINE", "ARCHAEOLOGISTS NE..."], [(10.06, 11.80), (11.80, 13.48)]),
+            (13.48, 16.58, ["GUJARAT KE ARABIAN SEA MEIN", "SCUBA DIVING SHURU KI!"], [(13.48, 15.06), (15.06, 16.58)]),
+            (16.58, 19.18, ["UNHE LAGA THA", "NORMAL PATHAR MILENGE..."], [(16.58, 17.82), (17.82, 19.18)]),
+            (19.18, 21.34, ["LEKIN JO CAMERA PAR", "RECORD HUA..."], [(19.18, 20.52), (20.52, 21.34)]),
+            (21.34, 24.52, ["USNE GLOBAL HISTORY KO", "HILA KAR RAKH DIYA!"], [(21.34, 23.14), (23.14, 24.52)]),
+            (24.52, 26.96, ["SAMUNDAR KI GEHRAAI MEIN", "UNHE MILE..."], [(24.52, 25.84), (25.84, 26.96)]),
+            (26.96, 29.32, ["VISHAL SEMI-CIRCULAR", "STONE BASTIONS!"], [(26.96, 28.04), (28.04, 29.32)]),
+            (29.32, 32.28, ["MACHHLIYON KE BEECH KHADE", "30 FEET UNCHE..."], [(29.32, 30.58), (30.58, 32.28)]),
+            (32.28, 36.26, ["CARVED PILLARS AUR STONE ANCHORS", "JO BRONZE AGE KE THE!"], [(32.28, 34.02), (34.02, 36.26)]),
+            (36.26, 39.96, ["MAHABHARAT MEIN LIKHA THA KI", "SHRI KRISHNA KI DWARKA NAGARI..."], [(36.26, 38.28), (38.28, 39.96)]),
+            (39.96, 44.30, ["UNKE JAANE KE BAAD SAMUNDAR KI", "VISHAL LEHARON MEIN DOOB GAYI THI!"], [(39.96, 41.18), (41.18, 44.30)]),
+            (44.30, 48.56, ["MODERN SCIENTISTS NE JAB", "POTTERY SAMPLES KI CARBON DATING KI..."], [(44.30, 46.44), (46.44, 48.56)]),
+            (48.56, 52.30, ["TO USKI AGE AAYI", "7500 SE 9000 SAAL PURANI!"], [(48.56, 50.44), (50.44, 52.30)]),
+            (52.30, 57.04, ["YAANI HARAPPAN CIVILIZATION SE BHI", "HAZARON SAAL PEHLE..."], [(52.30, 54.62), (54.62, 57.04)]),
+            (57.04, 61.78, ["EK ADVANCED MARITIME EMPIRE", "EXIST KARTA THA!"], [(57.04, 59.60), (59.60, 61.78)]),
+            (61.78, 64.32, ["AAKHIR US DAUR MEIN", "BINA MODERN CRANES KE..."], [(61.78, 63.04), (63.04, 64.32)]),
+            (64.32, 68.62, ["ITNE VISHAL SANDSTONE BLOCKS", "PAANI MEIN KAISE ASSEMBLE HUYE?"], [(64.32, 66.42), (66.42, 68.62)]),
+            (68.62, 71.80, ["YE HUMAN TECHNOLOGY THI", "YA DIVYA SHAKTI?"], [(68.62, 70.50), (70.50, 71.80)]),
+            (71.80, 75.00, ["SHRI KRISHNA KI PAVITRA NAGARI KE", "SAMMAN MEIN COMMENT MEIN LIKHEIN:"], [(71.80, 73.40), (73.40, 75.00)]),
+            (75.00, 77.28, ["JAI SHREE KRISHNA!", "🦚 JAI DWARKADHISH"], [(75.00, 76.00), (76.00, 77.28)]),
+            (77.28, 80.12, ["FOLLOW KAREIN", "@VIBEITIHAAS"], [(77.28, 78.40), (78.40, 80.12)])
         ]
     else:
         scenes_meta = [
