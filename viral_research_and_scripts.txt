@@ -7,25 +7,28 @@
 ================================================================================
 🔥 CURRENT ACTIVE PRODUCTION SCRIPT (UPDATED ON DEMAND)
 ================================================================================
-📌 Topic: Day 13 of Kurukshetra — The Tactical Betrayal of Abhimanyu
-⏱️ Target Length: 36 Seconds | Words: ~88 words (145 WPM dramatic pacing)
-🎙️ Voice Tone: Dark, Intense, Gripping, Documentary Authority (Think School style)
+📌 Topic: Sridhar Vembu (Zoho) — The Village Founder Who Refused Silicon Valley's Billions
+⏱️ Target Length: 46-48 Seconds | Words: ~115 words (145 WPM Inspiring Documentary Pacing)
+🎙️ Voice Tone: Inspiring, Powerful, Proud, Analytical (*Think School / Raj Shamani style*)
 ================================================================================
 
-[00:00 - 00:03] (HOOK)
-Kauravon ne Chakravyuha Pandavon ko harane ke liye nahi... balki unhe psychologically todne ke liye banaya tha!
+[00:00 - 00:04] (HOOK)
+Silicon Valley ke top investors ne billions of dollars offer kiye... lekin is Indian founder ne unke cheques unke munh par wapas fek diye!
 
-[00:03 - 00:15]
-Guru Drona jaante the ki poori sena mein sirf Arjuna aur Krishna ke paas is seven-tier rotating death maze ko todne ka formula tha. Isliye unhone pehle Arjuna ko yuddha se bees kilometer door divert kiya!
+[00:04 - 00:16]
+Ye hain Sridhar Vembu, Zoho ke founder. Jab saari startups hazaron crore ke funding burns aur layoffs mein doob rahi thi, Sridhar ne California chhod kar Tamil Nadu ke ek chhote se gao mein apna global headquarters khol diya!
 
-[00:15 - 00:27]
-Lekin 16 saal ke Abhimanyu ne akele che concentric circles ko cheer diya! Jab Kauravon ne dekha ki ek akela bachha unka poora military prestige mitti mein mila raha hai... to unke hath-paaon phool gaye!
+[00:16 - 00:28]
+Unhone na koi VC funding li, na ek rupaye ka karz. Balki un gaon ke bachho ko code karna sikhaya jinhe college tak naseeb nahi hua tha!
 
-[00:27 - 00:32]
-Drona, Karna aur Duryodhana sahit saat Maharathiyon ne milkar... warfare ka har ek niyam tod kar us nihatthe bachhe ko gher liya!
+[00:28 - 00:39]
+Aaj wahi gaon ke bachhe aisi software coding karte hain jise Google, Salesforce aur Microsoft bhi dekh kar hairan hain! Zoho aaj 150 deshon mein 100 million users serve karti hai aur hazaron crore ka pure profit banati hai!
 
-[00:32 - 00:36] (CTA)
-Kya ye Kauravon ki jeet thi ya unka sabse bada moral downfall? Comment mein likhein!
+[00:39 - 00:44]
+Aur Sridhar Vembu? Itni badi global empire ke baad bhi gao mein sadharan dhoti pehante hain aur cycle par ghoomte hain!
+
+[00:44 - 00:48] (CTA)
+Western valuation hype ya asli desi Swadeshi profit? Comment mein likhein: PROUD INDIAN!
 ================================================================================
 
 --------------------------------------------------------------------------------
@@ -453,5 +456,67 @@ Kya ye sirf ek blind belief hai ya ancient Bharat ka advanced Acoustic Resonance
 Follow @vibeitihaas for untold civilizational mysteries and strategic history breakdowns. Save & Share this reel! 📲
 
 #padmanabhaswamytemple #vaultb #ancientmysteries #indianhistory #sanatandharma #kerala #losttechnology #vibeitihaas
+
+
+--------------------------------------------------------------------------------
+PACKAGE 7: THE VILLAGE FOUNDER WHO SHOCKED SILICON VALLEY — SRIDHAR VEMBU (ZOHO)
+--------------------------------------------------------------------------------
+TITLE OVERLAY: The Village Genius Who Refused Silicon Valley's Billions 🚜💻
+
+SCRIPT (48 Seconds):
+[00:00 - 00:04] (HOOK)
+Silicon Valley ke top investors ne billions of dollars offer kiye... lekin is Indian founder ne unke cheques unke munh par wapas fek diye!
+
+[00:04 - 00:16]
+Ye hain Sridhar Vembu, Zoho ke founder. Jab saari startups hazaron crore ke funding burns aur layoffs mein doob rahi thi, Sridhar ne California chhod kar Tamil Nadu ke ek chhote se gao Mathalamparai mein apna global headquarters khol diya!
+
+[00:16 - 00:28]
+Unhone na koi VC funding li, na ek rupaye ka karz. Balki un gaon ke bachho ko code karna sikhaya jinhe college tak naseeb nahi hua tha!
+
+[00:28 - 00:39]
+Aaj wahi gaon ke bachhe aisi software coding karte hain jise Google, Salesforce aur Microsoft bhi dekh kar hairan hain! Zoho aaj 150 deshon mein 100 million users serve karti hai aur hazaron crore ka pure profit banati hai!
+
+[00:39 - 00:44]
+Aur Sridhar Vembu? Itni badi global empire ke baad bhi gao mein sadharan dhoti pehante hain aur cycle par ghoomte hain!
+
+[00:44 - 00:48] (CTA)
+Western valuation hype ya asli desi Swadeshi profit? Comment mein likhein: PROUD INDIAN!
+
+PURE COPY-PASTE FOR ELEVENLABS:
+Silicon Valley ke top investors ne billions of dollars offer kiye... lekin is Indian founder ne unke cheques unke munh par wapas fek diye!
+
+Ye hain Sridhar Vembu, Zoho ke founder. Jab saari startups hazaron crore ke funding burns aur layoffs mein doob rahi thi, Sridhar ne California chhod kar Tamil Nadu ke ek chhote se gao Mathalamparai mein apna global headquarters khol diya!
+
+Unhone na koi VC funding li, na ek rupaye ka karz. Balki un gaon ke bachho ko code karna sikhaya jinhe college tak naseeb nahi hua tha!
+
+Aaj wahi gaon ke bachhe aisi software coding karte hain jise Google, Salesforce aur Microsoft bhi dekh kar hairan hain! Zoho aaj 150 deshon mein 100 million users serve karti hai aur hazaron crore ka pure profit banati hai!
+
+Aur Sridhar Vembu? Itni badi global empire ke baad bhi gao mein sadharan dhoti pehante hain aur cycle par ghoomte hain!
+
+Western valuation hype ya asli desi Swadeshi profit? Comment mein likhein: PROUD INDIAN!
+
+VISUAL PROMPTS (Studio Ghibli / Makoto Shinkai Anime Cel Style):
+Scene 1 (0-16s):
+"Studio Ghibli anime cel artwork, Hayao Miyazaki aesthetic. A modest Indian visionary founder in traditional white cotton dhoti and shirt riding a black vintage bicycle along lush green South Indian paddy fields at golden sunrise, palm trees gently swaying, Makoto Shinkai vibrant anime sky, volumetric golden sunlight, vertical 9:16 format."
+Scene 2 (16-39s):
+"Studio Ghibli style inspiring tech anime cel scene. Inside an open-air clay tile thatched rural pavilion in a green village, talented young rural Indian students in simple clothes coding on high-end laptops, glowing golden code vectors and holographic screens floating softly, lush green monsoon nature outside, warm sunlight, vertical 9:16 format."
+Scene 3 (39-48s):
+"Studio Ghibli style cinematic split-screen conceptual anime artwork. On one side, gleaming towering glass skyscrapers of Silicon Valley shrouded in gloomy fog, contrasting with a vibrant radiant sunny Indian village where Zoho's global tech hub stands amidst coconut groves, Makoto Shinkai clouds, vertical 9:16 format."
+
+INSTAGRAM CAPTION:
+Silicon Valley ke investors ne hazaaron crore ke cheques offer kiye... lekin is Indian visionary ne unke dollar cheques unke munh par wapas kar diye! 🚜💻🇮🇳
+
+Zero Venture Capital. Zero Debt. Zero Layoffs.
+
+Sridhar Vembu ne California ka corporate glamour chhod kar Tamil Nadu ke chhote se gao mein Zoho ka global empire khada kar diya. Gaon ke un bachhon ko Zoho Schools mein train kiya jinhe college naseeb nahi hua tha—aur aaj wahi rural coders Google aur Microsoft ke software ko takkar de rahe hain! 
+
+"Real wealth is not valuation hype; it's creating prosperity where people are." ✨
+
+👇 Desi Swadeshi success ke samman mein comment mein likhein: "PROUD INDIAN" 🇮🇳
+
+Save this reel for pure entrepreneurial inspiration! 📲
+Follow @vibeitihaas for untold stories of Indian legends & visionary builders.
+
+#sridharvembu #zoho #startupindia #swadeshi #entrepreneurship #indianstartups #inspiration #businesscasestudy #vibeitihaas #successmindset
 ================================================================================
 

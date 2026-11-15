@@ -142,6 +142,71 @@ abhimanyu chakravyuha mystery, day 13 kurukshetra war, how abhimanyu broke chakr
             f.write(content)
         return
 
+    if "zoho" in audio_basename.lower() or "vembu" in audio_basename.lower():
+        content = f"""================================================================================
+⚡ VIBEITIHAAS VIRAL METADATA PACKAGE
+🎬 Video: {audio_basename}_ghibli_reel.mp4
+📌 Topic: Sridhar Vembu (Zoho) — The Village Founder Who Refused Billions
+================================================================================
+
+--------------------------------------------------------------------------------
+🔥 1. HIGH-CTR TITLES (Select for YouTube Shorts & Reels)
+--------------------------------------------------------------------------------
+Option 1 (Extreme Paradox):
+Rejected Silicon Valley Billions to Build a Tech Empire in a Village! 🚜💻
+
+Option 2 (Emotional Curiosity):
+Why This Indian Billionaire Wears Dhoti & Rides a Cycle? 🇮🇳 Zoho Story
+
+Option 3 (Shock Value):
+$0 VC Funding, $1 Billion Pure Profit: The Swadeshi Genius! 💰🔥
+
+--------------------------------------------------------------------------------
+📸 2. INSTAGRAM REELS CAPTION (Ready to Copy-Paste)
+--------------------------------------------------------------------------------
+Silicon Valley ke investors ne hazaaron crore ke cheques offer kiye... lekin is Indian visionary ne unke dollar cheques unke munh par wapas kar diye! 🚜💻🇮🇳
+
+Zero Venture Capital. Zero Debt. Zero Layoffs.
+
+Sridhar Vembu ne California ka corporate glamour chhod kar Tamil Nadu ke chhote se gao Mathalamparai mein Zoho ka global empire khada kar diya. Gaon ke un bachhon ko Zoho Schools mein train kiya jinhe college naseeb nahi hua tha—aur aaj wahi rural coders Google aur Microsoft ke software ko takkar de rahe hain! 
+
+"Real wealth is not valuation hype; it's creating prosperity where people are." ✨
+
+👇 Desi Swadeshi success ke samman mein comment mein likhein:
+"PROUD INDIAN" 🇮🇳
+
+Save this reel for pure entrepreneurial inspiration! 📲
+Follow @vibeitihaas for untold stories of Indian legends & visionary builders.
+
+.
+.
+#vibeitihaas #sridharvembu #zoho #startupindia #swadeshi #entrepreneurship #indianstartups #inspiration #businesscasestudy #successmindset #shorts #viralreels
+
+--------------------------------------------------------------------------------
+📺 3. YOUTUBE SHORTS DESCRIPTION (SEO & Algorithm Optimized)
+--------------------------------------------------------------------------------
+While modern tech startups burn thousands of crores in VC funding, Sridhar Vembu built Zoho with $0 outside funding, profitable from day one, headquartered in a small rural village in Tamil Nadu! He proved that rural Indian youth can outcode Silicon Valley giants.
+
+🇮🇳 Type "PROUD INDIAN" in the comments if you support Swadeshi tech!
+🔔 Subscribe to @vibeitihaas for deep dives into Indian history, business, and visionary leaders.
+
+#Shorts #Zoho #SridharVembu #StartupIndia #vibeitihaas #BusinessCaseStudy #Entrepreneurship #Swadeshi #IndianTech
+
+--------------------------------------------------------------------------------
+💬 4. PINNED COMMENT STRATEGY
+--------------------------------------------------------------------------------
+"Western valuation hype aur massive layoffs ya asli Swadeshi profit? Sridhar Vembu ke is visionary vision ke baare mein aapki kya ray hai? Comment karein! 👇🇮🇳"
+
+--------------------------------------------------------------------------------
+🏷️ 5. SEARCH KEYWORDS / TAGS
+--------------------------------------------------------------------------------
+sridhar vembu zoho case study, zoho founder story hindi, rural india tech revolution, swadeshi startup, bootstrapped billionaire, vibeitihaas, startup india inspiration, shorts
+================================================================================
+"""
+        with open(output_path, "w", encoding="utf-8") as f:
+            f.write(content)
+        return
+
     title_topic = audio_basename.replace("_", " ").title()
     
     if "kailash" in audio_basename.lower():
