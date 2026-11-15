@@ -207,6 +207,71 @@ sridhar vembu zoho case study, zoho founder story hindi, rural india tech revolu
             f.write(content)
         return
 
+    if "lepakshi" in audio_basename.lower() or "ancientbharat" in audio_basename.lower():
+        content = f"""================================================================================
+⚡ VIBEITIHAAS VIRAL METADATA PACKAGE
+🎬 Video: {audio_basename}_ghibli_reel.mp4
+📌 Topic: The Hanging Pillar of Lepakshi — Ancient Anti-Gravity Architecture
+================================================================================
+
+--------------------------------------------------------------------------------
+🔥 1. HIGH-CTR TITLES (Select for YouTube Shorts & Reels)
+--------------------------------------------------------------------------------
+Option 1 (Mystery / Paradox):
+The Temple Pillar That Floats In Mid-Air! 🏛️😱 Lepakshi Mystery
+
+Option 2 (Historical Drama):
+Why British Engineer Ran Away From This Indian Temple? ⏳⚡
+
+Option 3 (Shocking Science):
+500-Year-Old Anti-Gravity Architecture: Modern Science Shocked! 👁️
+
+--------------------------------------------------------------------------------
+📸 2. INSTAGRAM REELS CAPTION (Ready to Copy-Paste)
+--------------------------------------------------------------------------------
+Is mandir mein 70 vishal pathar ke khambhe hain... lekin unme se ek khambha hawa mein latak raha hai aur zameen ko touch tak nahi karta! 🏛️😱⚡
+
+Andhra Pradesh ke Lepakshi Veerabhadra Temple ka ye Hanging Pillar modern architecture ke liye ek unsolveable mystery bana hua hai. 
+
+1924 mein British engineer Hamilton ne ise blind belief maante hue lohe ki rods se displace karne ki koshish ki. Lekin jaise hi usne khambhe ko chhua, mandir ki chhat aur baaki 69 pillars hilne lage—aur engineer darr ke maare wahan se bhaag gaya! 
+
+Scientists ka manna hai ki hawa mein latakta hua ye pillar darasal poore mandir ke load ko acoustically balance kar raha hai! 
+
+👇 Pracheen Bharat ke is divya architectural chamatkaar ke samman mein comment mein likhein:
+"HAR HAR MAHADEV" 🙏🔱
+
+Save this reel & share with curious minds! 📲
+Follow @vibeitihaas for daily historical mysteries and untold Sanatan engineering feats.
+
+.
+.
+#vibeitihaas #lepakshi #hangingpillar #ancientengineering #indianhistory #sanatandharma #andhrapradesh #mysterytemple #veerabhadra #ancientindia #shorts #viralreels
+
+--------------------------------------------------------------------------------
+📺 3. YOUTUBE SHORTS DESCRIPTION (SEO & Algorithm Optimized)
+--------------------------------------------------------------------------------
+In the 500-year-old Lepakshi Veerabhadra Temple of Andhra Pradesh, one of the 70 massive stone pillars does not touch the ground at all. When a British engineer tried to dislodge it in 1924, the entire temple began shaking! What is the ancient anti-gravity science behind this hanging pillar?
+
+🔱 Comment 'HAR HAR MAHADEV' to honor ancient Indian engineering!
+🔔 Subscribe to @vibeitihaas for daily historical mysteries and untold Sanatan secrets.
+
+#Shorts #Lepakshi #HangingPillar #vibeitihaas #IndianHistory #SanatanDharma #AncientMysteries #Architecture #Trending
+
+--------------------------------------------------------------------------------
+💬 4. PINNED COMMENT STRATEGY
+--------------------------------------------------------------------------------
+"Kya aapko lagta hai ki ye ancient Bharat ki lost anti-gravity technology thi ya koi divya rahasya? Apni ray comment mein batayein aur 'HAR HAR MAHADEV' likhein! 👇🔱"
+
+--------------------------------------------------------------------------------
+🏷️ 5. SEARCH KEYWORDS / TAGS
+--------------------------------------------------------------------------------
+lepakshi hanging pillar mystery, lepakshi temple history in hindi, floating pillar of lepakshi, ancient indian technology, vibeitihaas, veerabhadra temple mystery, british engineer lepakshi, viral shorts
+================================================================================
+"""
+        with open(output_path, "w", encoding="utf-8") as f:
+            f.write(content)
+        return
+
     title_topic = audio_basename.replace("_", " ").title()
     
     if "kailash" in audio_basename.lower():
@@ -416,6 +481,29 @@ def main():
                 top_rgb=(30, 70, 40), bot_rgb=(245, 215, 120)
             ),
         }
+    elif "lepakshi" in audio_basename.lower() or "ancientbharat" in audio_basename.lower():
+        assets = {
+            "corridor": load_asset_or_fallback(
+                os.path.join(ASSETS_DIR, "ghibli_lepakshi_01_corridor*.jpg"),
+                top_rgb=(35, 30, 25), bot_rgb=(235, 175, 90)
+            ),
+            "floating_pillar": load_asset_or_fallback(
+                os.path.join(ASSETS_DIR, "ghibli_lepakshi_02_floating_pillar*.jpg"),
+                top_rgb=(40, 25, 20), bot_rgb=(250, 190, 80)
+            ),
+            "british_engineer": load_asset_or_fallback(
+                os.path.join(ASSETS_DIR, "ghibli_lepakshi_03_british_engineer*.jpg"),
+                top_rgb=(30, 35, 45), bot_rgb=(180, 140, 100)
+            ),
+            "shaking_temple": load_asset_or_fallback(
+                os.path.join(ASSETS_DIR, "ghibli_lepakshi_04_shaking_temple*.jpg"),
+                top_rgb=(25, 20, 30), bot_rgb=(200, 110, 60)
+            ),
+            "cosmic_architecture": load_asset_or_fallback(
+                os.path.join(ASSETS_DIR, "ghibli_lepakshi_05_cosmic_architecture*.jpg"),
+                top_rgb=(10, 15, 35), bot_rgb=(40, 120, 190)
+            ),
+        }
     else:
         assets = {
             "everest": load_asset_or_fallback(
@@ -534,6 +622,37 @@ def main():
             (58.28, 60.60, ["YA ASLI DESI", "SWADESHI PROFIT?"], [(58.28, 59.72), (59.72, 60.60)]),
             (60.60, 61.86, ["COMMENT MEIN", "LIKHEIN:"], [(60.60, 61.42), (61.42, 61.86)]),
             (61.86, 63.24, ["PROUD INDIAN!", "🇮🇳 @VIBEITIHAAS"], [(61.86, 62.50), (62.50, 63.24)])
+        ]
+    elif "lepakshi" in audio_basename.lower() or "ancientbharat" in audio_basename.lower():
+        scenes_meta = [
+            {"start": 0.00,  "end": 8.58,  "asset": "corridor",            "zoom": (1.00, 1.15), "pan": (0.50, 0.45), "vfx": "godrays"},
+            {"start": 8.58,  "end": 21.94, "asset": "floating_pillar",     "zoom": (1.05, 1.25), "pan": (0.50, 0.48), "vfx": "golden_aura"},
+            {"start": 21.94, "end": 32.10, "asset": "british_engineer",    "zoom": (1.00, 1.18), "pan": (0.50, 0.42), "vfx": "particles"},
+            {"start": 32.10, "end": 44.84, "asset": "shaking_temple",      "zoom": (1.05, 1.22), "pan": (0.50, 0.40), "vfx": "particles"},
+            {"start": 44.84, "end": max(duration, 61.5), "asset": "cosmic_architecture", "zoom": (1.05, 1.25), "pan": (0.50, 0.45), "vfx": "golden_aura"},
+        ]
+        captions = [
+            (0.00, 4.46, ["IS 500 SAAL PURANE MANDIR MEIN", "70 BHAARI PATHAR KE KHAMBHE HAIN..."], [(0.00, 1.62), (1.62, 4.46)]),
+            (4.46, 6.56, ["LEKIN UNME SE", "EK KHAMBHA..."], [(4.46, 5.78), (5.78, 6.56)]),
+            (6.96, 8.58, ["ZAMEEN KO CHHOOTA", "TAK NAHI!"], [(6.96, 7.68), (7.68, 8.58)]),
+            (9.26, 12.94, ["YE HAI ANDHRA PRADESH KA", "LEPAKSHI VEERABHADRA TEMPLE!"], [(9.26, 11.02), (11.02, 12.94)]),
+            (12.94, 17.20, ["YAHAN KA VISHAL GRANITE PILLAR", "HAWA MEIN LATAK RAHA HAI!"], [(12.94, 15.44), (15.44, 17.20)]),
+            (17.20, 21.94, ["ISKE NEECHE SE LOG KAPDA AUR", "KAGAZ AASAANI SE NIKAAL LETE HAIN!"], [(17.20, 19.66), (19.66, 21.94)]),
+            (21.94, 25.54, ["1924 MEIN BRITISH ENGINEER", "HAMILTON NE..."], [(21.94, 23.50), (23.50, 25.54)]),
+            (25.54, 27.80, ["ISE BLIND BELIEF", "MAANTE HUE..."], [(25.54, 26.74), (26.74, 27.80)]),
+            (27.80, 31.50, ["LOHE KI ROD SE IS KHAMBHE KO", "GIRANE KI KOSHISH KI!"], [(27.80, 29.84), (29.84, 31.50)]),
+            (32.01, 34.56, ["LEKIN JAISE HI USNE", "PRESSURE BANAYA..."], [(32.01, 33.56), (33.56, 34.56)]),
+            (34.56, 36.18, ["POORE MANDIR KI", "CHHAT..."], [(34.56, 35.64), (35.64, 36.18)]),
+            (36.18, 38.76, ["AUR DOOSRE 69 PILLARS", "HILNE LAGE!"], [(36.18, 37.78), (37.78, 38.76)]),
+            (38.76, 40.40, ["AUR PATHAR", "GIRNE LAGE!"], [(38.76, 39.74), (39.74, 40.40)]),
+            (40.94, 42.50, ["ENGINEER ITNA", "DARR GAYA KI..."], [(40.94, 41.84), (41.84, 42.50)]),
+            (42.50, 44.84, ["PROJECT CHHOD KAR", "WAHAN SE BHAAG GAYA!"], [(42.50, 43.62), (43.62, 44.84)]),
+            (44.84, 48.40, ["MODERN ARCHITECTURAL SCIENCE", "AAJ TAK NAHI SAMJH PAAYI..."], [(44.84, 46.84), (46.84, 48.40)]),
+            (48.40, 50.32, ["KI HAWA MEIN LATAKTA", "KHAMBHA..."], [(48.40, 49.20), (49.20, 50.32)]),
+            (50.32, 53.36, ["POORE MANDIR KA LOAD", "KAISE BALANCE KAR RAHA HAI!"], [(50.32, 51.74), (51.74, 53.36)]),
+            (53.36, 57.58, ["KYA YE ANCIENT BHARAT KI", "LOST ANTI-GRAVITY TECH THI?"], [(53.36, 55.48), (55.48, 57.58)]),
+            (57.58, 58.90, ["COMMENT MEIN", "LIKHEIN:"], [(57.58, 58.38), (58.38, 58.90)]),
+            (58.90, 60.92, ["HAR HAR MAHADEV!", "🔱 @VIBEITIHAAS"], [(58.90, 59.84), (59.84, 60.92)])
         ]
     else:
         scenes_meta = [
