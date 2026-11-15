@@ -1,0 +1,32 @@
+# Python Virtual Environment
+venv/
+*.pyc
+__pycache__/
+
+# Node.js
+node_modules/
+package-lock.json
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Audio inputs (Do not push audio voiceovers)
+input/*
+!input/.gitkeep
+
+# Rendered Video outputs (Do not push final MP4/video files)
+output/*.mp4
+output/*.mov
+output/*.mkv
+output/*.avi
+output/*.jpg
+output/*.png
+!output/.gitkeep
+
+# Local Whisper Transcript caches
+transcript_*.json
+transcript.json
+
+# Local Gemini / IDE files
+.gemini/
