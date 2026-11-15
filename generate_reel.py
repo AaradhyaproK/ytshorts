@@ -318,7 +318,7 @@ def main():
             {"start": 6.54,  "end": 15.80, "asset": "drona",          "zoom": (1.05, 1.22), "pan": (0.50, 0.40), "vfx": "godrays"},
             {"start": 15.80, "end": 21.20, "asset": "arjuna_distant", "zoom": (1.00, 1.18), "pan": (0.44, 0.52), "vfx": "mist"},
             {"start": 21.20, "end": 26.64, "asset": "warrior",        "zoom": (1.00, 1.20), "pan": (0.50, 0.48), "vfx": "golden_aura"},
-            {"start": 26.64, "end": 35.66, "asset": "breach",         "zoom": (1.05, 1.28), "pan": (0.48, 0.42), "vfx": "blizzard"},
+            {"start": 26.64, "end": 35.66, "asset": "breach",         "zoom": (1.05, 1.28), "pan": (0.48, 0.42), "vfx": "particles"},
             {"start": 35.66, "end": 44.46, "asset": "standoff",       "zoom": (1.00, 1.18), "pan": (0.50, 0.40), "vfx": "particles"},
             {"start": 44.46, "end": max(duration, 51.5), "asset": "chariot_wheel", "zoom": (1.10, 1.28), "pan": (0.50, 0.42), "vfx": "golden_aura"},
         ]
@@ -531,12 +531,6 @@ def main():
                 r = p['r']
                 d_vfx.ellipse([px_pos - r, py_pos - r, px_pos + r, py_pos + r], fill=(*p['color'], alpha))
                 d_vfx.ellipse([px_pos - r*2.2, py_pos - r*2.2, px_pos + r*2.2, py_pos + r*2.2], fill=(*p['color'], int(alpha * 0.35)))
-
-        if vfx_type == "blizzard":
-            for b in blizzard_particles:
-                bx = (b['x'] + current_time * b['speed_x']) % (W + 300) - 150
-                by = (b['y'] + current_time * b['speed_y']) % (H + 300) - 150
-                d_vfx.line([(bx, by), (bx + b['length'] * 0.8, by + b['length'])], fill=(240, 250, 255, b['alpha']), width=b['width'])
 
         if vfx_type == "golden_aura":
             ring_r = int(130 + 90 * math.sin(current_time * 3.0))
