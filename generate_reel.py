@@ -168,6 +168,10 @@ abhimanyu chakravyuha mystery, day 13 kurukshetra war, how abhimanyu broke chakr
         cta_word = "OM NAMO NARAYANAYA"
         deity_tag = "#vishnu #narayana #padmanabhaswamy #ancientindia"
         theme_tag = "#vaultb #nagabandham #acousticlock #mystery"
+    elif "chanakya" in audio_basename.lower() or "vishkanya" in audio_basename.lower():
+        cta_word = "CHANAKYA NITI"
+        deity_tag = "#chanakya #takshashila #maurya #ancientindia"
+        theme_tag = "#geopolitics #intelligence #vishkanya #historyfacts"
     else:
         cta_word = "SANATAN DHARMA"
         deity_tag = "#bharat #sanatandharma #incredibleindia"
