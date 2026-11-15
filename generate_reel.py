@@ -80,6 +80,68 @@ def generate_metadata_package(audio_basename, transcript, output_path):
     if audio_basename.lower() == "kailash" and os.path.exists(output_path):
         return
 
+    if "abhimayu" in audio_basename.lower() or "abhimanyu" in audio_basename.lower():
+        content = f"""================================================================================
+⚡ VIBEITIHAAS VIRAL METADATA PACKAGE
+🎬 Video: {audio_basename}_ghibli_reel.mp4
+📌 Topic: Day 13 of Kurukshetra: Abhimanyu's Chakravyuha
+================================================================================
+
+--------------------------------------------------------------------------------
+🔥 1. HIGH-CTR TITLES (Select for YouTube Shorts & Reels)
+--------------------------------------------------------------------------------
+Option 1 (Shock & Paradox):
+16-Year-Old vs 7 Maharathis: The Day Dharma Died ⚔️🩸
+
+Option 2 (Strategy & Mystery):
+How 1 Boy Broke The Impossible Chakravyuha 👁️ Mahabharata Secret
+
+Option 3 (Moral Conflict):
+Why Drona & Karna Broke All War Rules Against Abhimanyu? 😱
+
+--------------------------------------------------------------------------------
+📸 2. INSTAGRAM REELS CAPTION (Ready to Copy-Paste)
+--------------------------------------------------------------------------------
+Kauravon ne Chakravyuha ladayi jeetne ke liye nahi... balki Pandavon ki will-power ko hamesha ke liye todne ke liye design kiya tha. ⚔️🩸
+
+Day 13 of Kurukshetra: Guru Drona ki sabse calculated military formation ke saamne khada tha ek 16 saal ka ladka, jisne akele Kaurav sena ke 6 defense layers ko collapse kar diya!
+
+Lekin jab Kauravon ko apni haar dikhne lagi, to unhone ancient warfare ke saare codes tod diye...
+
+👇 Kya Karna aur Drona ka Abhimanyu ko milkar gherna justified tha? Tell us your opinion in the comments!
+
+Save this reel & share with history lovers! 📲
+Follow @vibeitihaas for untold historical & epic breakdowns.
+
+.
+.
+#vibeitihaas #mahabharata #abhimanyu #kurukshetra #chakravyuha #sanatandharma #ancienthistory #shorts #viralreels
+
+--------------------------------------------------------------------------------
+📺 3. YOUTUBE SHORTS DESCRIPTION (SEO & Algorithm Optimized)
+--------------------------------------------------------------------------------
+Day 13 of Kurukshetra: Guru Drona created the lethal 7-tier Chakravyuha to psychologically break the Pandavas. But 16-year-old warrior Abhimanyu breached 6 concentric defense tiers alone. Why did the greatest Maharathis break all rules of warfare to defeat one teenager?
+
+⚔️ Comment your thoughts on Abhimanyu's valor!
+🔔 Subscribe to @vibeitihaas for deep epic & historical breakdowns.
+
+#Shorts #Mahabharata #Abhimanyu #Chakravyuha #vibeitihaas #Kurukshetra #AncientHistory #SanatanDharma
+
+--------------------------------------------------------------------------------
+💬 4. PINNED COMMENT STRATEGY
+--------------------------------------------------------------------------------
+"Kya Karna aur Drona ka Abhimanyu ko akele gherna justified tha ya unka sabse bada moral downfall? Apni ray comment mein batayein! 👇⚔️"
+
+--------------------------------------------------------------------------------
+🏷️ 5. SEARCH KEYWORDS / TAGS
+--------------------------------------------------------------------------------
+abhimanyu chakravyuha mystery, day 13 kurukshetra war, how abhimanyu broke chakravyuha, mahabharata breakdown in hindi, vibeitihaas, why karna killed abhimanyu, guru drona chakravyuha strategy, viral shorts
+================================================================================
+"""
+        with open(output_path, "w", encoding="utf-8") as f:
+            f.write(content)
+        return
+
     title_topic = audio_basename.replace("_", " ").title()
     
     if "kailash" in audio_basename.lower():
@@ -196,20 +258,52 @@ def main():
 
     # Load 3 Ghibli Master Artworks (or safe procedural fallbacks if assets folder was cleared)
     print("Loading Ghibli Master Artworks...")
-    assets = {
-        "everest": load_asset_or_fallback(
-            os.path.join(ASSETS_DIR, "ghibli_01_everest_*.jpg"),
-            top_rgb=(25, 65, 115), bot_rgb=(240, 215, 160)
-        ),
-        "kailash_day": load_asset_or_fallback(
-            os.path.join(ASSETS_DIR, "ghibli_02_kailash_*.jpg"),
-            top_rgb=(40, 95, 155), bot_rgb=(18, 45, 60)
-        ),
-        "axis_night": load_asset_or_fallback(
-            os.path.join(ASSETS_DIR, "ghibli_03_axis_mundi_*.jpg"),
-            top_rgb=(5, 12, 28), bot_rgb=(10, 25, 45)
-        ),
-    }
+    if "abhimayu" in audio_basename.lower() or "abhimanyu" in audio_basename.lower():
+        assets = {
+            "chakravyuha": load_asset_or_fallback(
+                os.path.join(ASSETS_DIR, "ghibli_abhimanyu_01_chakravyuha*.jpg"),
+                top_rgb=(20, 24, 55), bot_rgb=(235, 140, 50)
+            ),
+            "warrior": load_asset_or_fallback(
+                os.path.join(ASSETS_DIR, "ghibli_abhimanyu_02_warrior*.jpg"),
+                top_rgb=(45, 20, 25), bot_rgb=(245, 190, 80)
+            ),
+            "standoff": load_asset_or_fallback(
+                os.path.join(ASSETS_DIR, "ghibli_abhimanyu_03_standoff*.jpg"),
+                top_rgb=(20, 24, 55), bot_rgb=(235, 140, 50)
+            ),
+            "drona": load_asset_or_fallback(
+                os.path.join(ASSETS_DIR, "ghibli_abhimanyu_04_drona*.jpg"),
+                top_rgb=(25, 30, 60), bot_rgb=(240, 180, 100)
+            ),
+            "arjuna_distant": load_asset_or_fallback(
+                os.path.join(ASSETS_DIR, "ghibli_abhimanyu_05_arjuna_distant*.jpg"),
+                top_rgb=(20, 25, 45), bot_rgb=(220, 130, 60)
+            ),
+            "breach": load_asset_or_fallback(
+                os.path.join(ASSETS_DIR, "ghibli_abhimanyu_06_breach*.jpg"),
+                top_rgb=(40, 15, 20), bot_rgb=(255, 200, 80)
+            ),
+            "chariot_wheel": load_asset_or_fallback(
+                os.path.join(ASSETS_DIR, "ghibli_abhimanyu_07_chariot_wheel_climax*.jpg"),
+                top_rgb=(50, 15, 25), bot_rgb=(250, 150, 60)
+            ),
+        }
+    else:
+        assets = {
+            "everest": load_asset_or_fallback(
+                os.path.join(ASSETS_DIR, "ghibli_01_everest_*.jpg"),
+                top_rgb=(25, 65, 115), bot_rgb=(240, 215, 160)
+            ),
+            "kailash_day": load_asset_or_fallback(
+                os.path.join(ASSETS_DIR, "ghibli_02_kailash_*.jpg"),
+                top_rgb=(40, 95, 155), bot_rgb=(18, 45, 60)
+            ),
+            "axis_night": load_asset_or_fallback(
+                os.path.join(ASSETS_DIR, "ghibli_03_axis_mundi_*.jpg"),
+                top_rgb=(5, 12, 28), bot_rgb=(10, 25, 45)
+            ),
+        }
 
     # Transcribe
     cache_json = os.path.join(SCRIPT_DIR, f"transcript_{audio_basename}.json")
@@ -218,65 +312,97 @@ def main():
     transcript = transcribe_audio(audio_file, cache_json)
 
     # Multi-scene schedule mapping across the Ghibli Masterpieces
-    scenes_meta = [
-        {"start": 0.00,  "end": 3.70,  "asset": "everest",      "zoom": (1.0, 1.10),  "pan": (0.50, 0.48), "vfx": "godrays"},
-        {"start": 3.70,  "end": 8.62,  "asset": "kailash_day",  "zoom": (1.0, 1.12),  "pan": (0.50, 0.52), "vfx": "particles"},
-        {"start": 8.62,  "end": 14.50, "asset": "kailash_day",  "zoom": (1.15, 1.28), "pan": (0.50, 0.38), "vfx": "godrays"},
-        {"start": 14.50, "end": 19.60, "asset": "axis_night",   "zoom": (1.0, 1.15),  "pan": (0.50, 0.50), "vfx": "particles"},
-        {"start": 19.60, "end": 25.78, "asset": "everest",      "zoom": (1.12, 1.22), "pan": (0.46, 0.55), "vfx": "mist"},
-        {"start": 25.78, "end": 32.22, "asset": "axis_night",   "zoom": (1.10, 1.22), "pan": (0.50, 0.45), "vfx": "particles"},
-        {"start": 32.22, "end": 37.34, "asset": "axis_night",   "zoom": (1.22, 1.35), "pan": (0.50, 0.40), "vfx": "particles"},
-        {"start": 37.34, "end": 40.68, "asset": "kailash_day",  "zoom": (1.20, 1.30), "pan": (0.45, 0.48), "vfx": "particles"},
-        {"start": 40.68, "end": 45.06, "asset": "everest",      "zoom": (1.05, 1.18), "pan": (0.50, 0.46), "vfx": "blizzard"},
-        {"start": 45.06, "end": 50.66, "asset": "axis_night",   "zoom": (1.15, 1.05), "pan": (0.50, 0.52), "vfx": "mist"},
-        {"start": 50.66, "end": 56.38, "asset": "kailash_day",  "zoom": (1.0, 1.12),  "pan": (0.42, 0.65), "vfx": "godrays"},
-        {"start": 56.38, "end": 61.92, "asset": "axis_night",   "zoom": (1.08, 1.18), "pan": (0.55, 0.60), "vfx": "mist"},
-        {"start": 61.92, "end": 67.88, "asset": "kailash_day",  "zoom": (1.10, 1.25), "pan": (0.50, 0.42), "vfx": "golden_aura"},
-        {"start": 67.88, "end": max(duration, 73.0), "asset": "axis_night", "zoom": (1.15, 1.30), "pan": (0.50, 0.42), "vfx": "golden_aura"},
-    ]
+    if "abhimayu" in audio_basename.lower() or "abhimanyu" in audio_basename.lower():
+        scenes_meta = [
+            {"start": 0.00,  "end": 6.54,  "asset": "chakravyuha",    "zoom": (1.00, 1.15), "pan": (0.50, 0.45), "vfx": "particles"},
+            {"start": 6.54,  "end": 15.80, "asset": "drona",          "zoom": (1.05, 1.22), "pan": (0.50, 0.40), "vfx": "godrays"},
+            {"start": 15.80, "end": 21.20, "asset": "arjuna_distant", "zoom": (1.00, 1.18), "pan": (0.44, 0.52), "vfx": "mist"},
+            {"start": 21.20, "end": 26.64, "asset": "warrior",        "zoom": (1.00, 1.20), "pan": (0.50, 0.48), "vfx": "golden_aura"},
+            {"start": 26.64, "end": 35.66, "asset": "breach",         "zoom": (1.05, 1.28), "pan": (0.48, 0.42), "vfx": "blizzard"},
+            {"start": 35.66, "end": 44.46, "asset": "standoff",       "zoom": (1.00, 1.18), "pan": (0.50, 0.40), "vfx": "particles"},
+            {"start": 44.46, "end": max(duration, 51.5), "asset": "chariot_wheel", "zoom": (1.10, 1.28), "pan": (0.50, 0.42), "vfx": "golden_aura"},
+        ]
+        captions = [
+            (0.00, 3.04, ["KAURAVON NE", "CHAKRAVYUHA"], [(0.00, 1.40), (1.40, 3.04)]),
+            (3.04, 6.54, ["PSYCHOLOGICALLY", "TODNE KE LIYE!"], [(3.04, 4.80), (4.80, 6.54)]),
+            (6.54, 8.48, ["GURU DRONA", "JAANTE THE KI..."], [(6.54, 7.50), (7.50, 8.48)]),
+            (8.48, 11.92, ["SIRF ARJUNA AUR", "KRISHNA KE PAAS"], [(8.48, 10.20), (10.20, 11.92)]),
+            (11.92, 15.80, ["7-TIER ROTATING", "DEATH MAZE FORMULA!"], [(11.92, 13.80), (13.80, 15.80)]),
+            (15.80, 18.50, ["ISLIYE ARJUNA KO", "YUDDHA SE..."], [(15.80, 17.10), (17.10, 18.50)]),
+            (18.50, 21.20, ["20 KILOMETER DOOR", "DIVERT KIYA!"], [(18.50, 19.80), (19.80, 21.20)]),
+            (21.20, 23.54, ["LEKIN 16 SAAL KE", "ABHIMANYU NE..."], [(21.20, 22.30), (22.30, 23.54)]),
+            (23.54, 26.64, ["AKELE 6 CONCENTRIC", "CIRCLES CHEER DIYE!"], [(23.54, 25.10), (25.10, 26.64)]),
+            (26.64, 30.02, ["JAB KAURAVON NE DEKHA", "EK AKELA BACHHA..."], [(26.64, 28.30), (28.30, 30.02)]),
+            (30.02, 33.44, ["MILITARY PRESTIGE", "MITTI MEIN MILA RAHA HAI!"], [(30.02, 31.70), (31.70, 33.44)]),
+            (33.44, 35.66, ["TO UNKE HATH-PAAON", "PHOOL GAYE!"], [(33.44, 34.50), (34.50, 35.66)]),
+            (35.66, 37.80, ["DRONA, KARNA AUR", "DURYODHANA SAHIT..."], [(35.66, 36.70), (36.70, 37.80)],),
+            (37.80, 40.10, ["SAAT MAHARATHIYON NE", "MILKAR..."], [(37.80, 38.90), (38.90, 40.10)]),
+            (40.10, 42.30, ["WARFARE KA HAR", "NIYAM TOD KAR..."], [(40.10, 41.20), (41.20, 42.30)]),
+            (42.30, 44.46, ["US NIHATTHE BACHHE KO", "GHER LIYA!"], [(42.30, 43.30), (43.30, 44.46)]),
+            (44.46, 46.54, ["KYA YE KAURAVON KI", "JEET THI?"], [(44.46, 45.50), (45.50, 46.54)]),
+            (46.54, 49.30, ["YA UNKA SABSE BADA", "MORAL DOWNFALL?"], [(46.54, 47.90), (47.90, 49.30)]),
+            (49.30, 50.99, ["COMMENT MEIN", "LIKHEIN!"], [(49.30, 50.10), (50.10, 50.99)])
+        ]
+    else:
+        scenes_meta = [
+            {"start": 0.00,  "end": 3.70,  "asset": "everest",      "zoom": (1.0, 1.10),  "pan": (0.50, 0.48), "vfx": "godrays"},
+            {"start": 3.70,  "end": 8.62,  "asset": "kailash_day",  "zoom": (1.0, 1.12),  "pan": (0.50, 0.52), "vfx": "particles"},
+            {"start": 8.62,  "end": 14.50, "asset": "kailash_day",  "zoom": (1.15, 1.28), "pan": (0.50, 0.38), "vfx": "godrays"},
+            {"start": 14.50, "end": 19.60, "asset": "axis_night",   "zoom": (1.0, 1.15),  "pan": (0.50, 0.50), "vfx": "particles"},
+            {"start": 19.60, "end": 25.78, "asset": "everest",      "zoom": (1.12, 1.22), "pan": (0.46, 0.55), "vfx": "mist"},
+            {"start": 25.78, "end": 32.22, "asset": "axis_night",   "zoom": (1.10, 1.22), "pan": (0.50, 0.45), "vfx": "particles"},
+            {"start": 32.22, "end": 37.34, "asset": "axis_night",   "zoom": (1.22, 1.35), "pan": (0.50, 0.40), "vfx": "particles"},
+            {"start": 37.34, "end": 40.68, "asset": "kailash_day",  "zoom": (1.20, 1.30), "pan": (0.45, 0.48), "vfx": "particles"},
+            {"start": 40.68, "end": 45.06, "asset": "everest",      "zoom": (1.05, 1.18), "pan": (0.50, 0.46), "vfx": "blizzard"},
+            {"start": 45.06, "end": 50.66, "asset": "axis_night",   "zoom": (1.15, 1.05), "pan": (0.50, 0.52), "vfx": "mist"},
+            {"start": 50.66, "end": 56.38, "asset": "kailash_day",  "zoom": (1.0, 1.12),  "pan": (0.42, 0.65), "vfx": "godrays"},
+            {"start": 56.38, "end": 61.92, "asset": "axis_night",   "zoom": (1.08, 1.18), "pan": (0.55, 0.60), "vfx": "mist"},
+            {"start": 61.92, "end": 67.88, "asset": "kailash_day",  "zoom": (1.10, 1.25), "pan": (0.50, 0.42), "vfx": "golden_aura"},
+            {"start": 67.88, "end": max(duration, 73.0), "asset": "axis_night", "zoom": (1.15, 1.30), "pan": (0.50, 0.42), "vfx": "golden_aura"},
+        ]
 
-    # Kinetic Subtitles
-    captions = [
-        (0.00, 1.45, ["MOUNT", "EVEREST"], [(0.00, 0.60), (0.60, 1.45)]),
-        (1.45, 3.20, ["7000+ LOG", "CHADH CHUKE"], [(1.45, 2.30), (2.30, 3.20)]),
-        (3.70, 5.00, ["2000M CHHOTE", "KAILASH"], [(3.70, 4.40), (4.40, 5.00)]),
-        (5.00, 6.26, ["PARVAT", "PAR..."], [(5.00, 5.60), (5.60, 6.26)]),
-        (6.26, 7.50, ["AAJ TAK KOI", "INSAAN"], [(6.26, 6.90), (6.90, 7.50)]),
-        (7.50, 8.62, ["KYUN NAHI", "CHADH PAYA?"], [(7.50, 8.00), (8.00, 8.62)]),
-        (9.90, 11.58, ["SCIENTISTS KE", "ANUSAAR"], [(9.90, 10.70), (10.70, 11.58)]),
-        (11.58, 13.20, ["KAILASH", "PARVAT"], [(11.58, 12.40), (12.40, 13.20)]),
-        (13.20, 14.50, ["SIRF EK", "PAHAD NAHI"], [(13.20, 13.80), (13.80, 14.50)]),
-        (14.50, 16.50, ["POORI PRITHVI KA", "KENDRA"], [(14.50, 15.60), (15.60, 16.50)]),
-        (16.50, 18.84, ["YAANI", "AXIS MUNDI!"], [(16.50, 17.50), (17.50, 18.84)]),
-        (19.60, 21.14, ["1999 MEIN", "EXPEDITION"], [(19.60, 20.30), (20.30, 21.14)]),
-        (21.14, 23.36, ["RUSSIAN", "MOUNTAINEERS"], [(21.14, 22.20), (22.20, 23.36)]),
-        (23.36, 25.22, ["CHADHNE KI", "KOSHISH KI"], [(23.36, 24.20), (24.20, 25.22)]),
-        (25.78, 27.78, ["KHAUFNAK", "RAAZ DEKHA!"], [(25.78, 26.70), (26.70, 27.78)]),
-        (28.38, 29.80, ["PARVAT KE PAAS", "JAATE HI"], [(28.38, 29.10), (29.10, 29.80)]),
-        (29.80, 31.70, ["WAQT KI RAFTAAR", "2X DUGNI!"], [(29.80, 30.70), (30.70, 31.70)]),
-        (32.22, 33.80, ["SIRF 12", "GHANTE MEIN"], [(32.22, 33.00), (33.00, 33.80)]),
-        (33.80, 35.20, ["BAAL AUR", "NAKHUN"], [(33.80, 34.50), (34.50, 35.20)]),
-        (35.20, 36.76, ["KAI DINO JITNE", "BADH GAYE!"], [(35.20, 36.00), (36.00, 36.76)]),
-        (37.34, 39.22, ["COMPASS", "GHOOMNE LAGA!"], [(37.34, 38.30), (38.30, 39.22)]),
-        (39.22, 40.68, ["JO BHI", "AAGE BADHA"], [(39.22, 39.90), (39.90, 40.68)]),
-        (40.68, 42.20, ["ACHANAK AAYE", "BARFEELE"], [(40.68, 41.50), (41.50, 42.20)]),
-        (42.20, 44.32, ["TOOFANO NE", "PEECHE DHAKELA!"], [(42.20, 43.20), (43.20, 44.32)]),
-        (45.06, 47.06, ["KUCH HI HAFTON", "MEIN"], [(45.06, 46.10), (46.10, 47.06)]),
-        (47.06, 50.06, ["AJEEB BIMAARI SE", "CHAL BASE..."], [(47.06, 48.50), (48.50, 50.06)]),
-        (50.66, 53.08, ["2 ANOKHI", "JHEELEIN"], [(50.66, 51.90), (51.90, 53.08)]),
-        (53.08, 54.80, ["LAKE", "MANSAROVAR"], [(53.08, 53.90), (53.90, 54.80)]),
-        (54.80, 56.38, ["AMRIT JAISA", "SHAANT PAANI"], [(54.80, 55.60), (55.60, 56.38)]),
-        (56.38, 58.00, ["AUR LAKE", "RAKSHASTAL"], [(56.38, 57.20), (57.20, 58.00)]),
-        (58.00, 59.50, ["KHAARA PAANI", "SALT WATER"], [(58.00, 58.80), (58.80, 59.50)]),
-        (59.50, 61.00, ["AAJ BHI", "ASHAANT HAI!"], [(59.50, 60.20), (60.20, 61.00)]),
-        (61.92, 63.50, ["KAHA JAATA HAI", "MYSTERY"], [(61.92, 62.70), (62.70, 63.50)]),
-        (63.50, 65.20, ["KAILASH", "PARVAT PAR"], [(63.50, 64.30), (64.30, 65.20)]),
-        (65.20, 67.88, ["KEWAL SIDDH", "AATMAAYEIN!"], [(65.20, 66.50), (66.50, 67.88)]),
-        (67.88, 69.10, ["COMMENT MEIN"], [(67.88, 69.10)]),
-        (69.10, 70.44, ["HAR HAR MAHADEV!"], [(69.10, 70.44)]),
-        (70.44, 71.70, ["FOLLOW"], [(70.44, 71.70)]),
-        (71.70, 72.98, ["@VIBEITIHAAS"], [(71.70, 72.98)])
-    ]
+        # Kinetic Subtitles
+        captions = [
+            (0.00, 1.45, ["MOUNT", "EVEREST"], [(0.00, 0.60), (0.60, 1.45)]),
+            (1.45, 3.20, ["7000+ LOG", "CHADH CHUKE"], [(1.45, 2.30), (2.30, 3.20)]),
+            (3.70, 5.00, ["2000M CHHOTE", "KAILASH"], [(3.70, 4.40), (4.40, 5.00)]),
+            (5.00, 6.26, ["PARVAT", "PAR..."], [(5.00, 5.60), (5.60, 6.26)]),
+            (6.26, 7.50, ["AAJ TAK KOI", "INSAAN"], [(6.26, 6.90), (6.90, 7.50)]),
+            (7.50, 8.62, ["KYUN NAHI", "CHADH PAYA?"], [(7.50, 8.00), (8.00, 8.62)]),
+            (9.90, 11.58, ["SCIENTISTS KE", "ANUSAAR"], [(9.90, 10.70), (10.70, 11.58)]),
+            (11.58, 13.20, ["KAILASH", "PARVAT"], [(11.58, 12.40), (12.40, 13.20)]),
+            (13.20, 14.50, ["SIRF EK", "PAHAD NAHI"], [(13.20, 13.80), (13.80, 14.50)]),
+            (14.50, 16.50, ["POORI PRITHVI KA", "KENDRA"], [(14.50, 15.60), (15.60, 16.50)]),
+            (16.50, 18.84, ["YAANI", "AXIS MUNDI!"], [(16.50, 17.50), (17.50, 18.84)]),
+            (19.60, 21.14, ["1999 MEIN", "EXPEDITION"], [(19.60, 20.30), (20.30, 21.14)]),
+            (21.14, 23.36, ["RUSSIAN", "MOUNTAINEERS"], [(21.14, 22.20), (22.20, 23.36)]),
+            (23.36, 25.22, ["CHADHNE KI", "KOSHISH KI"], [(23.36, 24.20), (24.20, 25.22)]),
+            (25.78, 27.78, ["KHAUFNAK", "RAAZ DEKHA!"], [(25.78, 26.70), (26.70, 27.78)]),
+            (28.38, 29.80, ["PARVAT KE PAAS", "JAATE HI"], [(28.38, 29.10), (29.10, 29.80)]),
+            (29.80, 31.70, ["WAQT KI RAFTAAR", "2X DUGNI!"], [(29.80, 30.70), (30.70, 31.70)]),
+            (32.22, 33.80, ["SIRF 12", "GHANTE MEIN"], [(32.22, 33.00), (33.00, 33.80)]),
+            (33.80, 35.20, ["BAAL AUR", "NAKHUN"], [(33.80, 34.50), (34.50, 35.20)]),
+            (35.20, 36.76, ["KAI DINO JITNE", "BADH GAYE!"], [(35.20, 36.00), (36.00, 36.76)]),
+            (37.34, 39.22, ["COMPASS", "GHOOMNE LAGA!"], [(37.34, 38.30), (38.30, 39.22)]),
+            (39.22, 40.68, ["JO BHI", "AAGE BADHA"], [(39.22, 39.90), (39.90, 40.68)]),
+            (40.68, 42.20, ["ACHANAK AAYE", "BARFEELE"], [(40.68, 41.50), (41.50, 42.20)]),
+            (42.20, 44.32, ["TOOFANO NE", "PEECHE DHAKELA!"], [(42.20, 43.20), (43.20, 44.32)]),
+            (45.06, 47.06, ["KUCH HI HAFTON", "MEIN"], [(45.06, 46.10), (46.10, 47.06)]),
+            (47.06, 50.06, ["AJEEB BIMAARI SE", "CHAL BASE..."], [(47.06, 48.50), (48.50, 50.06)]),
+            (50.66, 53.08, ["2 ANOKHI", "JHEELEIN"], [(50.66, 51.90), (51.90, 53.08)]),
+            (53.08, 54.80, ["LAKE", "MANSAROVAR"], [(53.08, 53.90), (53.90, 54.80)]),
+            (54.80, 56.38, ["AMRIT JAISA", "SHAANT PAANI"], [(54.80, 55.60), (55.60, 56.38)]),
+            (56.38, 58.00, ["AUR LAKE", "RAKSHASTAL"], [(56.38, 57.20), (57.20, 58.00)]),
+            (58.00, 59.50, ["KHAARA PAANI", "SALT WATER"], [(58.00, 58.80), (58.80, 59.50)]),
+            (59.50, 61.00, ["AAJ BHI", "ASHAANT HAI!"], [(59.50, 60.20), (60.20, 61.00)]),
+            (61.92, 63.50, ["KAHA JAATA HAI", "MYSTERY"], [(61.92, 62.70), (62.70, 63.50)]),
+            (63.50, 65.20, ["KAILASH", "PARVAT PAR"], [(63.50, 64.30), (64.30, 65.20)]),
+            (65.20, 67.88, ["KEWAL SIDDH", "AATMAAYEIN!"], [(65.20, 66.50), (66.50, 67.88)]),
+            (67.88, 69.10, ["COMMENT MEIN"], [(67.88, 69.10)]),
+            (69.10, 70.44, ["HAR HAR MAHADEV!"], [(69.10, 70.44)]),
+            (70.44, 71.70, ["FOLLOW"], [(70.44, 71.70)]),
+            (71.70, 72.98, ["@VIBEITIHAAS"], [(71.70, 72.98)])
+        ]
 
     # Pre-generate particles
     random.seed(108)
