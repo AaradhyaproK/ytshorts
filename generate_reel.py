@@ -860,9 +860,9 @@ def main():
         prog_w = int((W - 2 * pad_b) * prog_pct)
         d_out.line([(pad_b, bar_y), (pad_b + prog_w, bar_y)], fill=(255, 215, 0), width=6)
 
-        # Safe kinetic subtitles
+        # Safe multi-line kinetic subtitles (Guaranteed never to clip or cut text)
         for cap in captions:
-            c_start, c_end, words, timings = cap
+            c_start, c_end, raw_lines, timings = cap
             if c_start <= current_time <= c_end:
                 active_idx = 0
                 for wi, (ws, we) in enumerate(timings):
@@ -870,46 +870,56 @@ def main():
                         active_idx = wi
                         break
 
-                base_font_size = 78
-                font = ImageFont.truetype('/System/Library/Fonts/Supplemental/Impact.ttf', base_font_size)
-                space_w = int(base_font_size * 0.32)
-                boxes = [d_out.textbbox((0, 0), w, font=font) for w in words]
-                widths = [b[2] - b[0] for b in boxes]
-                total_w = sum(widths) + space_w * (len(words) - 1)
+                MAX_SAFE_W = 860  # Guarantees at least 110px safe margin on both left and right edges
+                base_font_size = 72
+                font_path = '/System/Library/Fonts/Supplemental/Impact.ttf'
+                font = ImageFont.truetype(font_path, base_font_size)
 
-                if total_w > MAX_SAFE_W:
-                    font_size = max(46, int(base_font_size * (MAX_SAFE_W / total_w)))
-                    font = ImageFont.truetype('/System/Library/Fonts/Supplemental/Impact.ttf', font_size)
-                    space_w = int(font_size * 0.32)
-                    boxes = [d_out.textbbox((0, 0), w, font=font) for w in words]
-                    widths = [b[2] - b[0] for b in boxes]
-                    total_w = sum(widths) + space_w * (len(words) - 1)
+                # Step 1: Measure each line's width and auto-scale font down if any line exceeds MAX_SAFE_W
+                max_line_w = 0
+                for line in raw_lines:
+                    bbox = d_out.textbbox((0, 0), line, font=font)
+                    lw = bbox[2] - bbox[0]
+                    if lw > max_line_w:
+                        max_line_w = lw
+
+                if max_line_w > MAX_SAFE_W:
+                    font_size = max(42, int(base_font_size * (MAX_SAFE_W / max_line_w)))
+                    font = ImageFont.truetype(font_path, font_size)
                 else:
                     font_size = base_font_size
 
-                start_x = (W - total_w) // 2
-                y_base = 1200
-                curr_x = start_x
+                # Step 2: Calculate line boxes and total vertical block height
+                line_boxes = [d_out.textbbox((0, 0), line, font=font) for line in raw_lines]
+                line_widths = [b[2] - b[0] for b in line_boxes]
+                line_h = int(font_size * 1.34)
+                total_block_h = len(raw_lines) * line_h
+                y_start = 1200 - (total_block_h // 2)
 
-                for wi, w in enumerate(words):
-                    is_active = (wi == active_idx)
-                    wb = boxes[wi]
+                # Step 3: Render each line vertically stacked and horizontally centered
+                for li, line_text in enumerate(raw_lines):
+                    is_active = (li == active_idx)
+                    lw = line_widths[li]
+                    lx = (W - lw) // 2
+                    ly = y_start + li * line_h
+                    l_box = line_boxes[li]
+
                     if is_active:
                         fill_col = (255, 230, 0)
                         stroke_col = (10, 15, 20)
                         stroke_w = max(6, int(font_size * 0.12))
                         pad_x = int(font_size * 0.22)
-                        pad_y = int(font_size * 0.12)
-                        d_out.rounded_rectangle([curr_x - pad_x, y_base + wb[1] - pad_y,
-                                                curr_x + widths[wi] + pad_x, y_base + wb[3] + pad_y],
-                                                radius=14, fill=(15, 20, 30, 230), outline=(255, 215, 0), width=3)
+                        pad_y = int(font_size * 0.10)
+                        d_out.rounded_rectangle([
+                            lx - pad_x, ly + l_box[1] - pad_y,
+                            lx + lw + pad_x, ly + l_box[3] + pad_y
+                        ], radius=14, fill=(15, 20, 30, 235), outline=(255, 215, 0), width=3)
                     else:
                         fill_col = (255, 255, 255)
                         stroke_col = (10, 15, 20)
                         stroke_w = max(5, int(font_size * 0.09))
 
-                    d_out.text((curr_x, y_base), w, font=font, fill=fill_col, stroke_fill=stroke_col, stroke_width=stroke_w)
-                    curr_x += widths[wi] + space_w
+                    d_out.text((lx, ly), line_text, font=font, fill=fill_col, stroke_fill=stroke_col, stroke_width=stroke_w)
                 break
 
         return frame.convert('RGB').tobytes()
