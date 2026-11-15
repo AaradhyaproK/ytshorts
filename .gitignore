@@ -25,6 +25,7 @@ output/*.png
 !output/.gitkeep
 
 # Local Whisper Transcript caches
+cache/
 transcript_*.json
 transcript.json
 

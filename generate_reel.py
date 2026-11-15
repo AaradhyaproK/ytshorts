@@ -385,6 +385,33 @@ def main():
                 top_rgb=(35, 15, 25), bot_rgb=(250, 160, 70)
             ),
         }
+    elif "vembu" in audio_basename.lower() or "zoho" in audio_basename.lower() or "shridhar" in audio_basename.lower():
+        assets = {
+            "silicon_valley": load_asset_or_fallback(
+                os.path.join(ASSETS_DIR, "ghibli_vembu_01_silicon_valley*.jpg"),
+                top_rgb=(30, 20, 45), bot_rgb=(240, 160, 80)
+            ),
+            "journey": load_asset_or_fallback(
+                os.path.join(ASSETS_DIR, "ghibli_vembu_02_journey*.jpg"),
+                top_rgb=(45, 60, 95), bot_rgb=(250, 200, 120)
+            ),
+            "village_hq": load_asset_or_fallback(
+                os.path.join(ASSETS_DIR, "ghibli_vembu_03_village_hq*.jpg"),
+                top_rgb=(35, 75, 45), bot_rgb=(220, 230, 140)
+            ),
+            "rural_coders": load_asset_or_fallback(
+                os.path.join(ASSETS_DIR, "ghibli_vembu_04_rural_coders*.jpg"),
+                top_rgb=(40, 50, 40), bot_rgb=(240, 200, 110)
+            ),
+            "global_tech": load_asset_or_fallback(
+                os.path.join(ASSETS_DIR, "ghibli_vembu_05_global_tech*.jpg"),
+                top_rgb=(15, 20, 50), bot_rgb=(70, 140, 200)
+            ),
+            "bicycle": load_asset_or_fallback(
+                os.path.join(ASSETS_DIR, "ghibli_vembu_06_bicycle_dhoti*.jpg"),
+                top_rgb=(30, 70, 40), bot_rgb=(245, 215, 120)
+            ),
+        }
     else:
         assets = {
             "everest": load_asset_or_fallback(
@@ -464,6 +491,45 @@ def main():
             (41.24, 44.52, ["GREEK SOLDIERS NE", "INSAAR KAR DIYA!"], [(41.24, 42.80), (42.80, 44.52)]),
             (44.52, 47.34, ["BRUTE FORCE YA", "MASTERMIND INTELLIGENCE?"], [(44.52, 45.90), (45.90, 47.34)]),
             (47.34, 49.63, ["COMMENT KAREIN!", "@VIBEITIHAAS"], [(47.34, 48.50), (48.50, 49.63)]),
+        ]
+    elif "vembu" in audio_basename.lower() or "zoho" in audio_basename.lower() or "shridhar" in audio_basename.lower():
+        scenes_meta = [
+            {"start": 0.00,  "end": 8.76,  "asset": "silicon_valley", "zoom": (1.00, 1.16), "pan": (0.50, 0.45), "vfx": "particles"},
+            {"start": 8.76,  "end": 17.18, "asset": "journey",        "zoom": (1.00, 1.18), "pan": (0.50, 0.42), "vfx": "godrays"},
+            {"start": 17.18, "end": 27.66, "asset": "village_hq",     "zoom": (1.05, 1.22), "pan": (0.50, 0.48), "vfx": "particles"},
+            {"start": 27.66, "end": 36.60, "asset": "rural_coders",   "zoom": (1.00, 1.18), "pan": (0.50, 0.45), "vfx": "golden_aura"},
+            {"start": 36.60, "end": 48.62, "asset": "global_tech",    "zoom": (1.05, 1.25), "pan": (0.50, 0.40), "vfx": "particles"},
+            {"start": 48.62, "end": 56.56, "asset": "bicycle",        "zoom": (1.00, 1.18), "pan": (0.50, 0.45), "vfx": "godrays"},
+            {"start": 56.56, "end": max(duration, 64.0), "asset": "bicycle", "zoom": (1.18, 1.30), "pan": (0.50, 0.42), "vfx": "golden_aura"},
+        ]
+        captions = [
+            (0.00, 2.18, ["SILICON VALLEY KE", "TOP INVESTORS NE..."], [(0.00, 1.02), (1.02, 2.18)]),
+            (2.18, 4.04, ["BILLIONS OF DOLLARS", "OFFER KIYE!"], [(2.18, 3.40), (3.40, 4.04)]),
+            (4.04, 6.56, ["LEKIN IS INDIAN", "FOUNDER NE..."], [(4.04, 5.32), (5.32, 6.56)]),
+            (6.56, 8.76, ["UNKE CHEQUES UNKE MUNH", "PAR WAPAS FEK DIYE!"], [(6.56, 7.34), (7.34, 8.76)]),
+            (8.76, 10.92, ["YE HAIN", "SRIDHAR VEMBU!"], [(8.76, 9.88), (9.88, 10.92)]),
+            (10.92, 12.42, ["ZOHO KE", "FOUNDER!"], [(10.92, 11.68), (11.68, 12.42)]),
+            (12.42, 15.00, ["JAB SAARI STARTUPS", "HAZARON CRORE KE..."], [(12.42, 13.92), (13.92, 15.00)]),
+            (15.00, 17.18, ["FUNDING BURNS AUR", "LAYOFFS MEIN DOOB RAHI THI!"], [(15.00, 15.94), (15.94, 17.18)]),
+            (17.18, 19.26, ["SRIDHAR NE", "CALIFORNIA CHHOD KAR..."], [(17.18, 18.04), (18.04, 19.26)]),
+            (19.26, 21.98, ["TAMIL NADU KE EK", "CHHOTE SE GAON MEIN..."], [(19.26, 20.38), (20.38, 21.98)]),
+            (21.98, 23.56, ["APNA GLOBAL", "HEADQUARTERS KHOL DIYA!"], [(21.98, 22.72), (22.72, 23.56)]),
+            (23.56, 25.84, ["NA KOI VC", "FUNDING LI..."], [(23.56, 24.64), (24.64, 25.84)]),
+            (25.84, 27.66, ["NA EK RUPAYE", "KA KARZ!"], [(25.84, 26.80), (26.80, 27.66)]),
+            (27.66, 30.62, ["BALKI UN GAON KE", "BACHHON KO CODE SIKHAYA..."], [(27.66, 28.88), (28.88, 30.62)]),
+            (30.62, 32.92, ["JINHE COLLEGE TAK", "NASEEB NAHI HUA THA!"], [(30.62, 31.80), (31.80, 32.92)]),
+            (32.92, 36.60, ["AAJ WAHI GAON KE BACHHE", "AISI CODING KARTE HAIN..."], [(32.92, 34.72), (34.72, 36.60)]),
+            (36.60, 40.62, ["GOOGLE, SALESFORCE & MICROSOFT", "BHI DEKH KAR HAIRAN HAIN!"], [(36.60, 38.54), (38.54, 40.62)]),
+            (40.62, 43.16, ["ZOHO AAJ 150", "DESHON MEIN..."], [(40.62, 41.74), (41.74, 43.16)]),
+            (43.16, 45.54, ["100 MILLION USERS", "SERVE KARTA HAI!"], [(43.16, 44.28), (44.28, 45.54)]),
+            (45.54, 48.62, ["AUR HAZARON CRORE KA", "PURE PROFIT BANATA HAI!"], [(45.54, 46.92), (46.92, 48.62)]),
+            (48.62, 52.58, ["AUR ITNI BADI", "GLOBAL EMPIRE KE BAAD BHI..."], [(48.62, 50.66), (50.66, 52.58)]),
+            (52.58, 54.86, ["GAON MEIN SADHARAN", "DHOTI PEHANTE HAIN..."], [(52.58, 53.90), (53.90, 54.86)]),
+            (54.86, 56.56, ["AUR CYCLE PAR", "GHOOMTE HAIN!"], [(54.86, 55.72), (55.72, 56.56)]),
+            (56.56, 58.28, ["WESTERN VALUATION", "HYPE?"], [(56.56, 57.40), (57.40, 58.28)]),
+            (58.28, 60.60, ["YA ASLI DESI", "SWADESHI PROFIT?"], [(58.28, 59.72), (59.72, 60.60)]),
+            (60.60, 61.86, ["COMMENT MEIN", "LIKHEIN:"], [(60.60, 61.42), (61.42, 61.86)]),
+            (61.86, 63.24, ["PROUD INDIAN!", "🇮🇳 @VIBEITIHAAS"], [(61.86, 62.50), (62.50, 63.24)])
         ]
     else:
         scenes_meta = [
