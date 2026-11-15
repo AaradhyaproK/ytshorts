@@ -297,6 +297,29 @@ def main():
                 top_rgb=(50, 15, 25), bot_rgb=(250, 150, 60)
             ),
         }
+    elif "chanakya" in audio_basename.lower() or "vishkanya" in audio_basename.lower():
+        assets = {
+            "alexander": load_asset_or_fallback(
+                os.path.join(ASSETS_DIR, "ghibli_chanakya_01_alexander*.jpg"),
+                top_rgb=(40, 25, 30), bot_rgb=(240, 180, 100)
+            ),
+            "mastermind": load_asset_or_fallback(
+                os.path.join(ASSETS_DIR, "ghibli_chanakya_02_mastermind*.jpg"),
+                top_rgb=(25, 20, 45), bot_rgb=(235, 140, 60)
+            ),
+            "vishkanya": load_asset_or_fallback(
+                os.path.join(ASSETS_DIR, "ghibli_chanakya_03_vishkanya*.jpg"),
+                top_rgb=(30, 15, 40), bot_rgb=(200, 100, 160)
+            ),
+            "mutiny": load_asset_or_fallback(
+                os.path.join(ASSETS_DIR, "ghibli_chanakya_04_greek_mutiny*.jpg"),
+                top_rgb=(15, 20, 35), bot_rgb=(60, 90, 130)
+            ),
+            "victory": load_asset_or_fallback(
+                os.path.join(ASSETS_DIR, "ghibli_chanakya_05_victory*.jpg"),
+                top_rgb=(35, 15, 25), bot_rgb=(250, 160, 70)
+            ),
+        }
     else:
         assets = {
             "everest": load_asset_or_fallback(
@@ -350,6 +373,32 @@ def main():
             (44.46, 46.54, ["KYA YE KAURAVON KI", "JEET THI?"], [(44.46, 45.50), (45.50, 46.54)]),
             (46.54, 49.30, ["YA UNKA SABSE BADA", "MORAL DOWNFALL?"], [(46.54, 47.90), (47.90, 49.30)]),
             (49.30, 50.99, ["COMMENT MEIN", "LIKHEIN!"], [(49.30, 50.10), (50.10, 50.99)])
+        ]
+    elif "chanakya" in audio_basename.lower() or "vishkanya" in audio_basename.lower():
+        scenes_meta = [
+            {"start": 0.00,  "end": 8.80,  "asset": "alexander",   "zoom": (1.00, 1.15), "pan": (0.50, 0.45), "vfx": "godrays"},
+            {"start": 8.80,  "end": 20.04, "asset": "mastermind",  "zoom": (1.05, 1.25), "pan": (0.50, 0.40), "vfx": "particles"},
+            {"start": 20.04, "end": 34.80, "asset": "vishkanya",   "zoom": (1.00, 1.18), "pan": (0.50, 0.48), "vfx": "golden_aura"},
+            {"start": 34.80, "end": 44.52, "asset": "mutiny",      "zoom": (1.05, 1.22), "pan": (0.50, 0.42), "vfx": "mist"},
+            {"start": 44.52, "end": max(duration, 50.0), "asset": "victory", "zoom": (1.10, 1.25), "pan": (0.50, 0.42), "vfx": "golden_aura"},
+        ]
+        captions = [
+            (0.00, 3.64, ["ALEXANDER KI", "GREEK ARMY KO..."], [(0.00, 1.80), (1.80, 3.64)]),
+            (3.64, 6.18, ["KISI TALWAR NE NAHI..."], [(3.64, 6.18)]),
+            (6.18, 8.80, ["BALKI CHANAKYA KE", "FEAR TRAP NE ROKA!"], [(6.18, 7.50), (7.50, 8.80)]),
+            (8.80, 13.22, ["GREEK GENERALS JAB", "MAGADHA BADH RAHE THE"], [(8.80, 11.00), (11.00, 13.22)]),
+            (13.22, 16.48, ["CHANAKYA KE PAAS", "5X CHHOTI ARMY THI!"], [(13.22, 14.80), (14.80, 16.48)]),
+            (16.48, 20.04, ["UNHONE CHUNA", "ASYMMETRIC WARFARE!"], [(16.48, 18.20), (18.20, 20.04)]),
+            (20.04, 22.94, ["RECRUIT KIYA", "VISHKANYAS KO!"], [(20.04, 21.50), (21.50, 22.94)]),
+            (22.94, 25.58, ["LETHAL FEMALE SPIES", "POISON NETWORK"], [(22.94, 24.20), (24.20, 25.58)]),
+            (25.58, 29.72, ["MICRO-DOSES SE", "IMMUNE & DEADLY!"], [(25.58, 27.60), (27.60, 29.72)]),
+            (29.72, 31.90, ["EK POISONED MEAL", "AUR GENERALS..."], [(29.72, 30.80), (30.80, 31.90)]),
+            (31.90, 34.80, ["RAATON-RAAT", "KHATAM HO GAYE!"], [(31.90, 33.30), (33.30, 34.80)]),
+            (34.80, 38.90, ["GREEK CAMPS MEIN", "AFWAAH FAILI KI..."], [(34.80, 36.80), (36.80, 38.90)]),
+            (38.90, 41.24, ["BHARAT MEIN AATE HI", "SHRAPIT HOKAR MARENGE!"], [(38.90, 40.00), (40.00, 41.24)]),
+            (41.24, 44.52, ["GREEK SOLDIERS NE", "INSAAR KAR DIYA!"], [(41.24, 42.80), (42.80, 44.52)]),
+            (44.52, 47.34, ["BRUTE FORCE YA", "MASTERMIND INTELLIGENCE?"], [(44.52, 45.90), (45.90, 47.34)]),
+            (47.34, 49.63, ["COMMENT KAREIN!", "@VIBEITIHAAS"], [(47.34, 48.50), (48.50, 49.63)]),
         ]
     else:
         scenes_meta = [
